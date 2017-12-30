@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 20, 2016 11:06:40 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="pos" name="pos.util.PenjualanMaster" optimistic-lock="version" table="penjualan_master">
+    <id name="noTransaksi" type="string">
+      <column name="NoTransaksi"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="tanggal" type="date">
+      <column length="10" name="Tanggal"/>
+    </property>
+    <property name="total" type="java.lang.Double">
+      <column name="Total" precision="22" scale="0"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="penjualanDetils" table="penjualan_detil">
+      <key>
+        <column name="NoTransaksi"/>
+      </key>
+      <one-to-many class="pos.util.PenjualanDetil"/>
+    </set>
+  </class>
+</hibernate-mapping>

@@ -8,11 +8,11 @@
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.show_sql">true</property>
     <property name="hibernate.format_sql">true</property>
-    <property name="hibernate.query.factory_class">org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory</property>
-    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="hibernate.query.factory_class">org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory</property>
+    <property name="hibernate.hbm2ddl.auto">validate</property>
     <property name="hibernate.connection.password">toor</property>
-    <mapping resource="Entity/Barang.hbm.xml"/>
-    <mapping resource="Entity/PenjualanMaster.hbm.xml"/>
-    <mapping resource="Entity/PenjualanDetil.hbm.xml"/>
+    <mapping resource="pos/util/Barang.hbm.xml"/>
+    <mapping resource="pos/util/PenjualanMaster.hbm.xml"/>
+    <mapping resource="pos/util/PenjualanDetil.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

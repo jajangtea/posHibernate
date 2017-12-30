@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 20, 2016 11:06:40 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="pos" name="pos.util.PenjualanDetil" optimistic-lock="version" table="penjualan_detil">
+    <id name="id" type="java.lang.Integer">
+      <column name="Id"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="pos.util.Barang" fetch="select" name="barang">
+      <column name="KodeBarang"/>
+    </many-to-one>
+    <many-to-one class="pos.util.PenjualanMaster" fetch="select" name="penjualanMaster">
+      <column name="NoTransaksi"/>
+    </many-to-one>
+    <property name="jumlah" type="java.lang.Integer">
+      <column name="Jumlah"/>
+    </property>
+    <property name="subTotal" type="java.lang.Double">
+      <column name="SubTotal" precision="22" scale="0"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,4 +1,4 @@
-package Entity;
+package pos.util;
 // Generated Oct 20, 2016 11:06:39 AM by Hibernate Tools 4.3.1
 
 
@@ -13,9 +13,9 @@ public class Barang  implements java.io.Serializable {
 
      private String kodeBarang;
      private String namaBarang;
-     private Float harga;
+     private Double harga;
      private String satuan;
-     private Double stok;
+     private Integer stok;
      private Set penjualanDetils = new HashSet(0);
 
     public Barang() {
@@ -25,7 +25,7 @@ public class Barang  implements java.io.Serializable {
     public Barang(String kodeBarang) {
         this.kodeBarang = kodeBarang;
     }
-    public Barang(String kodeBarang, String namaBarang, Float harga, String satuan, Double stok, Set penjualanDetils) {
+    public Barang(String kodeBarang, String namaBarang, Double harga, String satuan, Integer stok, Set penjualanDetils) {
        this.kodeBarang = kodeBarang;
        this.namaBarang = namaBarang;
        this.harga = harga;
@@ -48,11 +48,11 @@ public class Barang  implements java.io.Serializable {
     public void setNamaBarang(String namaBarang) {
         this.namaBarang = namaBarang;
     }
-    public Float getHarga() {
+    public Double getHarga() {
         return this.harga;
     }
     
-    public void setHarga(Float harga) {
+    public void setHarga(Double harga) {
         this.harga = harga;
     }
     public String getSatuan() {
@@ -62,11 +62,11 @@ public class Barang  implements java.io.Serializable {
     public void setSatuan(String satuan) {
         this.satuan = satuan;
     }
-    public Double getStok() {
+    public Integer getStok() {
         return this.stok;
     }
     
-    public void setStok(Double stok) {
+    public void setStok(Integer stok) {
         this.stok = stok;
     }
     public Set getPenjualanDetils() {

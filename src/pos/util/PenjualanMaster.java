@@ -1,4 +1,4 @@
-package Entity;
+package pos.util;
 // Generated Oct 20, 2016 11:06:39 AM by Hibernate Tools 4.3.1
 
 
